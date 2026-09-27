@@ -29,6 +29,7 @@ if (Test-Path $backup) {
     powercfg /setactive SCHEME_CURRENT
     Write-Host 'Original lid close action restored.'
 }
+Write-Host 'Power mode is left as it is; change it in Settings > System > Power & battery if needed.'
 
 Remove-Item "$env:ProgramFiles\windows-clamshell", $data -Recurse -Force -ErrorAction SilentlyContinue
 Write-Host 'windows-clamshell uninstalled.' -ForegroundColor Green
